@@ -1,0 +1,191 @@
+/* Fondo y tipografía */
+body {
+    background: linear-gradient(135deg, #e0f7e9, #b2f0d4);
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo del contenedor principal */
+.container {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 800px;
+    margin: 40px auto; /* Margen superior para alejarlo del borde superior */
+}
+
+/* Estilos para la sección de bienvenida */
+.bienvenida {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* (Resto del CSS sin cambios) */
+
+
+.imagen {
+    width: 100px; /* Tamaño fijo */
+    height: auto;
+    transition: transform 1s ease-in-out;
+}
+
+.izquierda {
+    transform: rotate(-10deg);
+    animation: moverIzquierda 3s ease-in-out infinite alternate;
+}
+
+.derecha {
+    transform: rotate(10deg);
+    animation: moverDerecha 3s ease-in-out infinite alternate;
+}
+
+/* Animaciones */
+@keyframes moverIzquierda {
+    0% {
+        transform: translateY(0) rotate(-10deg);
+    }
+    100% {
+        transform: translateY(-10px) rotate(-10deg);
+    }
+}
+
+@keyframes moverDerecha {
+    0% {
+        transform: translateY(0) rotate(10deg);
+    }
+    100% {
+        transform: translateY(-10px) rotate(10deg);
+    }
+}
+
+/* Estilo del contenedor del botón */
+.boton-container {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    animation: aparecerBoton 2s forwards;
+}
+
+/* Animación para el botón */
+@keyframes aparecerBoton {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilo del botón de chimosear */
+#chimosearBtn {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#chimosearBtn:hover {
+    background-color: #45a049;
+    transform: translateY(-3px);
+}
+
+/* Estilos adicionales para la información */
+.div-rutina {
+    margin: 20px 0;
+    display: inline-block;
+    text-align: center;
+}
+
+.imagen-fija {
+    width: 200px; /* Tamaño fijo para las imágenes de las rutinas */
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Estilo de los botones de rutina */
+.boton-rutina {
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.boton-rutina:hover {
+    background-color: #45a049;
+}
+
+/* Estilo para el botón de regresar */
+.boton-container {
+    display: flex;
+    justify-content: center; /* Centra el botón */
+    margin-top: 20px; /* Ajuste de margen superior */
+}
+
+.boton-regresar {
+    margin-top: 30px;
+    padding: 12px 25px; /* Ajuste del tamaño del botón */
+    font-size: 1rem; /* Tamaño de fuente */
+    background-color: #f44336; /* Color de fondo rojo */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.boton-regresar:hover {
+    background-color: #d32f2f; /* Color al pasar el mouse */
+}
+
+.ejercicio {
+    display: flex;
+    align-items: center; /* Centrar verticalmente */
+    margin-bottom: 20px; /* Espaciado entre ejercicios */
+}
+
+
+.video {
+    flex: 1; /* Ocupa la parte izquierda */
+    margin-right: 15px; /* Espacio entre video y detalles */
+}
+
+.ejercicio iframe {
+    max-width: 100%; /* Ajustar al contenedor */
+    height: auto; /* Mantener la proporción */
+}
+
+
+.detalles {
+    flex: 2; /* Ocupa la parte derecha */
+    text-align: left; /* Alinear texto a la izquierda */
+}
+
+.footer {
+    background-color: #f8f9fa; /* Color de fondo claro */
+    color: #333; /* Color del texto */
+    text-align: center; /* Centrar el texto */
+    padding: 20px; /* Espaciado interior */
+    margin-top: 20px; /* Espacio superior */
+    border-top: 1px solid #ccc; /* Línea superior */
+    position: relative; /* Para un mejor posicionamiento */
+    bottom: 0; /* Alineación al fondo */
+    width: 100%; /* Ancho completo */
+}
