@@ -1,0 +1,134 @@
+/* Fondo y tipografía */
+body {
+    background: linear-gradient(135deg, #e0f7e9, #b2f0d4);
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Contenedor principal */
+.container {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 800px;
+    margin: 40px auto;
+}
+
+/* Títulos */
+h1, h2, h3 {
+    color: #333;
+    margin: 20px 0;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-top: 30px;
+    color: #4CAF50;
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: #f44336;
+}
+
+/* Descripción */
+.descripcion {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 20px auto;
+    max-width: 700px;
+    color: #555;
+}
+
+/* Ejercicios */
+.ejercicio {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.video {
+    flex: 1;
+    max-width: 300px;
+    margin-right: 20px;
+}
+
+.ejercicio iframe {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.detalles {
+    flex: 2;
+    font-size: 0.9rem;
+}
+
+.detalles p {
+    margin: 5px 0;
+}
+
+/* Botón regresar */
+.boton-container {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.boton-regresar {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.boton-regresar:hover {
+    background-color: #d32f2f;
+    transform: translateY(-3px);
+}
+
+/* Footer */
+.footer {
+    background-color: #f8f9fa;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+    border-top: 1px solid #ccc;
+}
+
+/* Responsividad */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .video iframe {
+        height: 150px;
+    }
+
+    .detalles {
+        font-size: 0.8rem;
+    }
+
+    .boton-regresar {
+        font-size: 0.9rem;
+    }
+}

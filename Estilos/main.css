@@ -1,0 +1,130 @@
+/* Fondo y tipografía */
+body {
+    background: linear-gradient(135deg, #e0f7e9, #b2f0d4);
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Altura mínima para ajustar el footer */
+}
+
+/* Encabezado */
+.header {
+    text-align: center;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Contenido principal */
+.main-content {
+    flex: 1; /* Hace que ocupe todo el espacio disponible */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra verticalmente */
+    align-items: center; /* Centra horizontalmente */
+    padding: 20px;
+}
+
+/* Sección de bienvenida */
+.bienvenida {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las imágenes y el texto se ajusten en móviles */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.bienvenida h1 {
+    margin: 10px 20px;
+    font-size: 2rem;
+    color: #333;
+}
+
+/* Estilo de las imágenes */
+.imagen {
+    width: 80px; /* Tamaño más pequeño para mejor adaptabilidad */
+    height: auto;
+    margin: 10px;
+    transition: transform 1s ease-in-out;
+}
+
+.izquierda {
+    transform: rotate(-10deg);
+    animation: moverIzquierda 3s ease-in-out infinite alternate;
+}
+
+.derecha {
+    transform: rotate(10deg);
+    animation: moverDerecha 3s ease-in-out infinite alternate;
+}
+
+@keyframes moverIzquierda {
+    0% {
+        transform: translateY(0) rotate(-10deg);
+    }
+    100% {
+        transform: translateY(-10px) rotate(-10deg);
+    }
+}
+
+@keyframes moverDerecha {
+    0% {
+        transform: translateY(0) rotate(10deg);
+    }
+    100% {
+        transform: translateY(-10px) rotate(10deg);
+    }
+}
+
+/* Botón de chismosear */
+.boton-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#chimosearBtn {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: none; /* Oculto inicialmente */
+}
+
+#chimosearBtn:hover {
+    background-color: #45a049;
+    transform: translateY(-3px);
+}
+
+@keyframes aparecerBoton {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Footer */
+.footer {
+    background-color: #f8f9fa;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #ccc;
+    width: 100%;
+    position: relative;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rutinas Tavale - Información</title>
+    <!-- Cargar los estilos específicos de la página -->
+    <link rel="stylesheet" href="../Estilos/informacion.css">
+</head>
+<body>
+    <div class="container">
+        <h1>¿Qué harás hoy?</h1>
+
+        <!-- Día de Empuje -->
+        <div class="div-rutina">
+            <div>
+                <img src="../Imagenes/Empuje.jpg" alt="Día de Empuje" class="imagen-fija empuje">
+            </div>
+            <button class="boton-rutina" onmouseover="animarImagen('empuje')" onmouseout="detenerAnimacion('empuje')" onclick="window.location.href='diaempuje.html'">Día de Empuje</button>
+        </div>
+
+        <!-- Día de Jalón -->
+        <div class="div-rutina">
+            <div>
+                <img src="../Imagenes/Jalon.jpg" alt="Día de Jalón" class="imagen-fija jalon">
+            </div>
+            <button class="boton-rutina" onmouseover="animarImagen('jalon')" onmouseout="detenerAnimacion('jalon')" onclick="window.location.href='diajalon.html'">Día de Jalón</button>
+        </div>
+
+        <!-- Día de Pierna -->
+        <div class="div-rutina">
+            <div>
+                <img src="../Imagenes/Pierna.jpg" alt="Día de Pierna" class="imagen-fija pierna">
+            </div>
+            <button class="boton-rutina" onmouseover="animarImagen('pierna')" onmouseout="detenerAnimacion('pierna')" onclick="window.location.href='diapierna.html'">Día de Pierna</button>
+        </div>
+
+        <!-- Botón de regreso -->
+        <div class="boton-regreso">
+            <button class="boton-regresar" onclick="window.location.href='../index.html'">Regresar</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>Creado por Gustavo Siancas</p>
+        <p>Motivo: Estaba webeando</p>
+        <p>Palabras del creador: PESADO Y AL FALLO</p>
+        <p>2024</p>
+    </div>
+
+    <!-- Script para animaciones -->
+    <script src="../Funciones/script.js"></script>
+</body>
+</html>
